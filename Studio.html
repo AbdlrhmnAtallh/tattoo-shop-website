@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="studio.css">
     <link rel="icon" href="Images/icone/icone.jpg" type="image/png">
-    <title>GALLERY</title>
+    <title>Gellery</title>
 </head>
 <body>
-
-    
+    <header> 
+        <nav class="navMenu">
+            <img src="Images/icone/icone.jpg" style="height: 30px; width: 30px; border-radius: 50%;">
+            <a href="index.html">Home</a>
+            <!-- <a href="#">GALLERY</a> -->
+            <a href="test.html">About</a>
+            <a href="#">Contact</a>
+            <div class="dot"></div>
+          </nav>
+        </header>
+  
+        <button id="scrollToTopBtn" class="scroll-to-top">^</button>
     <ul>
         <li>
             <a>
@@ -77,6 +87,45 @@
             </a>
         </li>
     </ul>
+   <script>
+       let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".navMenu").style.top = "0"; // Show the navigation bar
+  } else {
+    document.querySelector(".navMenu").style.top = "-100px"; // Hide the navigation bar
+  }
+  prevScrollpos = currentScrollPos;
+}
 
+   </script>
+  
+
+  <script>
+      // Get the button element
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// Function to scroll to the top of the page
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Smooth scrolling behavior
+  });
+}
+
+// Add click event listener to the button
+scrollToTopBtn.addEventListener("click", scrollToTop);
+
+// Show or hide the button based on scroll position
+window.addEventListener("scroll", function() {
+  if (window.pageYOffset > 100) { // Adjust this value as needed
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+});
+
+  </script>
 </body>
 </html>
