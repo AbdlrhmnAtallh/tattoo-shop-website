@@ -8359,19 +8359,21 @@ textarea.form-control {
 }
 
 .navMenu a:hover {
-  color: #007bff;
+  color: #e83e8c;
 }
 
 .navMenu a:hover .dot {
   opacity: 1;
+  /* z-index: 10000; */
 }
 
 .navMenu .dot {
+  z-index: -1;
   width: 6px;
   height: 6px;
   background: #fddb3a;
   border-radius: 50%;
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   bottom: -10px; /* Position the dot below the link */
   left: 50%;
@@ -8401,4 +8403,14 @@ textarea.form-control {
   .navMenu a:nth-child(4):hover .dot {
     transform: translateX(calc(-50% + 210px)); /* Adjust positioning */
   }
+}
+
+/* ####  social icons #### */
+/* ####  social icons #### */
+/* ####  social icons #### */
+
+
+
+.socialicons :hover{
+  color: #e83e8c;
 }
