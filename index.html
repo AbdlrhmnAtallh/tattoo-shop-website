@@ -6,61 +6,42 @@
   <title>Tattoo Shop</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="Images/icone/icone.jpg" type="image/png">
+  <!-- ## Button style -->
+  <!-- Add Font Awesome link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body> 
+
+
 
 <!-- ### Home page Video ### -->  
 <section class="video-section">
-  <video autoplay loop muted class="video-bg">
+  <video autoplay loop muted class="video-bg" id="myVideo">
     <source src="Images/TattooIntro.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  <button id="muteButton"><i class="fas fa-volume-up"></i></button>
+  <!--## Js code for muteButton -->
+  <script>
+    document.getElementById("muteButton").addEventListener("click", function() {
+      var video = document.getElementById("myVideo");
+      if (video.muted) {
+        video.muted = false;
+        document.getElementById("muteButton").innerHTML = '<i class="fas fa-volume-up"></i>';
+      } else {
+        video.muted = true;
+        document.getElementById("muteButton").innerHTML = '<i class="fas fa-volume-off"></i>';
+      }
+    });
+  </script>
+</section>
 <!-- ### End Home page Video ### --> 
 
 
 <!-- ## Optional ->-> you can deleted All this sectio (homw) 
          and use the <h1>Welcome to our .. . by uncommting it 
  -->
-<section class="homw">
-  <div class="home-content">
-      <div class="lightwhite">
-          <!-- <h3>Welcome to</h3>
-      <h1>BrainBox world</h1>
-      <h3>Here you can <span class="text"></span></h3> -->
-      <!--## style for this section only ## -->
-      <style>
-        .lightwhite {
-                       background-color: rgba(255, 255, 255, 0.1); /* Light white background color with very low opacity */
-                       color: rgb(251, 251, 251); /* Text color */
-                       border: none; 
-                       border-radius: 6%;/* Remove border */
-                       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-                    }
-      </style>
-      <!--## Js for this section only ##-->
-      <script>
-        var typed = new Typed(".text", {
-                                          strings: ["shop toys", "buy toys","discover more toys"],
-                                          typeSpeed: 100,
-                                          backSpeed: 100,
-                                          backDelay: 1000,
-                                          loop: true,
-                                        });
 
-        let section = document.querySelector(".three");
-        let spans = document.querySelectorAll(".progress span");
-        window.onscroll = function () {
-          if (window.scrollY >= section.offsetTop - 1000) {
-            spans.forEach((span) => {
-              span.style.width = span.dataset.width;
-            });
-          }
-        };
-
-      </script>
-    </div> 
-  </div>
-</section>
 <!--## End homw section ##-->
 
 
