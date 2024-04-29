@@ -16,7 +16,54 @@
     Your browser does not support the video tag.
   </video>
 <!-- ### End Home page Video ### --> 
- 
+
+
+<!-- ## Optional ->-> you can deleted All this sectio (homw) 
+         and use the <h1>Welcome to our .. . by uncommting it 
+ -->
+<section class="homw">
+  <div class="home-content">
+      <div class="lightwhite">
+          <!-- <h3>Welcome to</h3>
+      <h1>BrainBox world</h1>
+      <h3>Here you can <span class="text"></span></h3> -->
+      <!--## style for this section only ## -->
+      <style>
+        .lightwhite {
+                       background-color: rgba(255, 255, 255, 0.1); /* Light white background color with very low opacity */
+                       color: rgb(251, 251, 251); /* Text color */
+                       border: none; 
+                       border-radius: 6%;/* Remove border */
+                       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+                    }
+      </style>
+      <!--## Js for this section only ##-->
+      <script>
+        var typed = new Typed(".text", {
+                                          strings: ["shop toys", "buy toys","discover more toys"],
+                                          typeSpeed: 100,
+                                          backSpeed: 100,
+                                          backDelay: 1000,
+                                          loop: true,
+                                        });
+
+        let section = document.querySelector(".three");
+        let spans = document.querySelectorAll(".progress span");
+        window.onscroll = function () {
+          if (window.scrollY >= section.offsetTop - 1000) {
+            spans.forEach((span) => {
+              span.style.width = span.dataset.width;
+            });
+          }
+        };
+
+      </script>
+    </div> 
+  </div>
+</section>
+<!--## End homw section ##-->
+
+
   <div class="content">
     <h1>Welcome to our Tattoo Shop</h1>
     <p>We are passionate about creating unique designs.</p>

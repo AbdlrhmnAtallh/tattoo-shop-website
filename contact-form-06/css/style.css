@@ -8368,9 +8368,9 @@ textarea.form-control {
 }
 
 .navMenu .dot {
-  z-index: -1;
-  width: 6px;
-  height: 6px;
+  
+  width: 0px;
+  height: 0px;
   background: #fddb3a;
   border-radius: 50%;
   opacity: 1;
